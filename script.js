@@ -45,7 +45,14 @@ submitButton.addEventListener('click', async () => {
         <h3>${title}</h3>
         <p>${rating}/10</p>
         <p>${review}</p>
+        <button class="delete-btn">Delete Review</button>
     `
+
+    const deleteButton = card.querySelector('.delete-btn')
+
+    deleteButton.addEventListener('click', () => {
+        card.remove()
+    })
 
     reviewList.appendChild(card)
 
